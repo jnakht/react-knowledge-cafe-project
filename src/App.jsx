@@ -10,8 +10,15 @@ function App() {
 
   return (
     <>
-      <Header></Header>
-      <Blogs></Blogs>
+      <div className='md:w-5/6 mx-auto'>
+          <Header></Header>
+          <hr />
+          <main>
+              {/* left side: blogs */}
+              <Blogs></Blogs>
+              {/* right side: bookmarks */}
+          </main>
+      </div>
     </>
   )
 }
