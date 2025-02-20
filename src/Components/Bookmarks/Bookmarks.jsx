@@ -1,5 +1,5 @@
 import Bookmark from "../Bookmark/Bookmark";
-
+import PropTypes from 'prop-types';
 
 const Bookmarks = ({bookmarks}) => {
     return (
@@ -12,7 +12,7 @@ const Bookmarks = ({bookmarks}) => {
                 <h3 className="text-[#111] text-2xl font-bold text-center ">Bookmarked Blogs : {bookmarks.length}</h3>
             <div className="flex flex-col gap-4 mt-4">
             {
-                bookmarks.map(bookmark => <Bookmark bookmark={bookmark}></Bookmark>)
+                bookmarks.map((bookmark, idx) => <Bookmark key={idx} bookmark={bookmark}></Bookmark>)
             }
             </div>
             </div>
@@ -20,4 +20,7 @@ const Bookmarks = ({bookmarks}) => {
     );
 };
 
+Bookmarks.propTypes = {
+    bookmarks: PropTypes.array,
+}
 export default Bookmarks;
