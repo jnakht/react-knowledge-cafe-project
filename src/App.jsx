@@ -14,8 +14,12 @@ function App() {
   }
 
   const [spentTime, setSpentTime] = useState(0);
-  const handleMarkAsRead = (reading_time) => {
+  const handleMarkAsRead = (title, reading_time) => {
     setSpentTime(spentTime + reading_time);
+
+    // if marked as read, remove from bookmark(remove using title)
+    const remainingBookmarks = bookmarks.filter(bookmark => bookmark !== title);
+    setBookmarks(remainingBookmarks);
   }
   return (
     <>

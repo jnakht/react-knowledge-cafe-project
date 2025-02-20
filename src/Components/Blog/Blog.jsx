@@ -28,7 +28,7 @@ const Blog = ({blog, handleBookmarks, handleMarkAsRead}) => {
                     hashtags.map((hashtag, idx) => <p key={idx} className="text-[#11111199] text-xl font-medium">#{hashtag}</p>)
                 }
             </div>
-            <a className="text-[#6047EC] text-xl font-semibold underline cursor-pointer" onClick={() => handleMarkAsRead(reading_time)}>Mark as read</a>
+            <a className="text-[#6047EC] text-xl font-semibold underline cursor-pointer" onClick={() => handleMarkAsRead(title, reading_time)}>Mark as read</a>
             <hr className="mt-8 bg-[#11111199]" />
         </div>
     );
