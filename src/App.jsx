@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import './App.css'
 import Header from './Components/Header/Header'
 import Blogs from './Components/Blogs/Blogs'
@@ -12,6 +12,11 @@ function App() {
       const newBookmarks = [...bookmarks, title];
       setBookmarks(newBookmarks);
   }
+
+  const [spentTime, setSpentTime] = useState(0);
+  const handleMarkAsRead = (reading_time) => {
+    setSpentTime(spentTime + reading_time);
+  }
   return (
     <>
       <div className='md:w-5/6 mx-auto'>
@@ -19,9 +24,9 @@ function App() {
           <hr />
           <main className='flex justify-between'>
               {/* left side: blogs */}
-              <Blogs handleBookmarks={handleBookmarks}></Blogs>
+              <Blogs handleBookmarks={handleBookmarks} handleMarkAsRead={handleMarkAsRead}></Blogs>
               {/* right side: bookmarks */}
-              <Bookmarks bookmarks={bookmarks}></Bookmarks>
+              <Bookmarks bookmarks={bookmarks} spentTime={spentTime}></Bookmarks>
           </main>
       </div>
     </>
