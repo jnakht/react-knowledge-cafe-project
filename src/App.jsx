@@ -22,7 +22,7 @@ function App() {
       <div className='md:w-5/6 mx-auto'>
           <Header></Header>
           <hr />
-          <main className='flex justify-between'>
+          <main className='flex justify-between mt-8'>
               {/* left side: blogs */}
               <Blogs handleBookmarks={handleBookmarks} handleMarkAsRead={handleMarkAsRead}></Blogs>
               {/* right side: bookmarks */}

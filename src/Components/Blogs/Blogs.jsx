@@ -10,7 +10,7 @@ const Blogs = ({handleBookmarks, handleMarkAsRead}) => {
         .then(data => setBlogs(data))
     } ,[])
     return (
-        <div className="border-2 border-red-600 w-[69%] pr-6">
+        <div className=" w-[69%] pr-6">
             {
                 blogs.map(blog => <Blog 
                     key={blog.id} 

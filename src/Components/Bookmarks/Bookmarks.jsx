@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 const Bookmarks = ({bookmarks, spentTime}) => {
     console.log('total spent time', spentTime);
     return (
-        <div className="border-2 border-green-600 w-[29%]">
+        <div className=" w-[29%]">
             <div className="h-[80px] bg-[#6047EC1A] border border-solid border-[#6047EC] flex justify-center items-center rounded-[8px] mb-6">
                 {/* spent time code here */}
                 <h4 className=" text-[#6047EC] text-2xl font-bold">Spent time on read : {spentTime} min</h4>

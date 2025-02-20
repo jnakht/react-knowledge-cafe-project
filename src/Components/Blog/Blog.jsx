@@ -6,16 +6,16 @@ const Blog = ({blog, handleBookmarks, handleMarkAsRead}) => {
         <div className="mb-[40px]">
             <img className="w-full rounded-xl" src={cover} alt={`image of ${title}`}  />
             <div className="flex justify-between mt-8">
-                <div className="flex border-2 border-yellow-600 gap-6">
+                <div className="flex  gap-6">
                     <img className="w-[60px]" src={author_img} alt="" />
                     <div className="flex flex-col justify-between">
                         <b className="text-[#111] text-2xl font-bold">{author}</b>
                         <p className="text-[#11111199] text-base font-semibold">{posted_date}</p>
                     </div>
                 </div>
-                <div className="border-2 border-yellow-600 flex flex-row justify-between items-center gap-1">
+                <div className=" flex flex-row justify-between items-center gap-1">
                         <p className="text-[#11111199] text-xl font-medium">{reading_time} min read</p>
-                        <button onClick={() => handleBookmarks(title)}><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <button className='cursor-pointer' onClick={() => handleBookmarks(title)}><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
   <path d="M17.593 3.322C18.693 3.45 19.5 4.399 19.5 5.507V21L12 17.25L4.5 21V5.507C4.5 4.399 5.306 3.45 6.407 3.322C10.1232 2.89063 13.8768 2.89063 17.593 3.322Z" stroke="#111111" stroke-opacity="0.6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 </svg></button>
                     
